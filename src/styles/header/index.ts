@@ -5,7 +5,6 @@ export const headerStyle = StyleSheet.create({
   main: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     headingColor,
-    flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',

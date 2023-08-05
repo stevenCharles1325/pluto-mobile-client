@@ -1,4 +1,4 @@
-import {backgroundColor, foregroundColor, headingColor, textColor} from '../global';
+import {backgroundColor, headingColor} from '../global';
 import {StyleSheet} from 'react-native';
 
 export const postStyle = StyleSheet.create({

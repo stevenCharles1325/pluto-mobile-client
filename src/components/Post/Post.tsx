@@ -1,8 +1,9 @@
 import {View} from 'react-native';
 import {IconButton, Text} from 'react-native-paper';
-import {postStyle} from '../styles/post';
 import {ActivityIndicator, Divider} from 'react-native-paper';
-import {accentColor} from '../styles/global';
+import {accentColor} from '../../styles/global';
+import {postStyle} from '../../styles/post';
+import {Avatar} from 'react-native-paper';
 
 export default function Post() {
   return (
@@ -11,6 +12,20 @@ export default function Post() {
         <ActivityIndicator animating={true} color={accentColor} size="large" />
       </View>
       <View style={postStyle.postDescriptionBox}>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: 10,
+            marginVertical: 5,
+          }}>
+          <Avatar.Text
+            size={30}
+            label="SC"
+            style={{backgroundColor: accentColor}}
+          />
+          <Text>Username here</Text>
+        </View>
         <Text>Sample text here</Text>
         <Divider style={postStyle.postDescriptionBoxDivider} />
         <Text style={{color: 'rgba(255, 255, 255, 0.5)'}}>40,576 likes</Text>
