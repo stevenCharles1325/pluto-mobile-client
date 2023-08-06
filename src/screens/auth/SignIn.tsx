@@ -4,8 +4,9 @@ import PButton from '../../components/Buttons';
 import TextInput from '../../components/TextInputs/TextInput';
 import LogoName from '../../components/Logo/LogoName';
 import PasswordInput from '../../components/TextInputs/PasswordInput';
+import React from 'react';
 
-export default function SignIn() {
+export default function SignIn({navigation}) {
   return (
     <View
       style={{
@@ -18,10 +19,14 @@ export default function SignIn() {
       <LogoName />
       <View style={{flex: 5, gap: 20}}>
         <TextInput label="Username" />
-        <PasswordInput label="Password"/>
+        <PasswordInput label="Password" />
         <View>
-          <PButton label="Sign In" mode="contained"/>
-          <PButton label="Sign Up" mode="text" />
+          <PButton label="Sign In" mode="contained" />
+          <PButton
+            label="Sign Up"
+            mode="text"
+            onPress={() => navigation.navigate('Sign-up')}
+          />
           <View>
             <PButton
               label="Forgot password?"

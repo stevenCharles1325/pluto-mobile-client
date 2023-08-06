@@ -1,6 +1,6 @@
 // import React from "react";
 import {PropsWithChildren} from 'react';
-import {Image, ScrollView, View} from 'react-native';
+import {Image, View} from 'react-native';
 import {IconButton} from 'react-native-paper';
 import {headerStyle} from '../styles/header';
 

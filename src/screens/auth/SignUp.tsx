@@ -5,7 +5,7 @@ import SignUpStages from '../../components/SignUpStages';
 import LogoName from '../../components/Logo/LogoName';
 import PButton from '../../components/Buttons';
 
-export default function SignUp() {
+export default function SignUp({navigation}) {
   const [position, setPosition] = React.useState(0);
   const isFinished = React.useMemo(() => position === 2, [position]);
 
@@ -42,7 +42,12 @@ export default function SignUp() {
           ) : (
             <PButton mode="contained" label="Sign-up" />
           )}
-          <PButton mode="text" label="Sign-in" textColor={textColor}/>
+          <PButton
+            mode="text"
+            label="Sign-in"
+            textColor={textColor}
+            onPress={() => navigation.navigate('Sign-in')}
+          />
         </View>
       </View>
     </ScrollView>
